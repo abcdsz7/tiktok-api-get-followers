@@ -4,10 +4,26 @@ import csv
 
 # Get your API key here: https://scraptik.com
 
-scraptik_apikey = "ENTER API KEY HERE"
+scraptik_apikey = "import requests
+
+url = "https://scraptik.p.rapidapi.com/search-users"
+
+querystring = {
+"keyword":"morocco",
+"count":"20",
+"cursor":"0"
+}
+
+headers = {
+	"X-RapidAPI-Key": "YOUR-KEY-HERE",
+	"X-RapidAPI-Host": "scraptik.p.rapidapi.com"
+}
+
+response = requests.get(url, headers=headers, params=querystring)
+print(response.json())"
 
 #Use Scraptik "Username to ID" under Services if you need to look it up
-user_id = "ENTER USER ID HERE"
+user_id = "z9x7k0_"
 
 fieldnames = [
     'unique_id',
